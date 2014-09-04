@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.author = {
     'Matthias Tretter' => 'm.yellow@gmx.at'
   }
-  s.source       = { :git => "https://github.com/myell0w/MNCLogging.git", :tag => "{s.version}" }
+  s.source       = { :git => "https://github.com/myell0w/MNCLogging.git", :tag => "1.0.0" }
   s.source_files = '*.{h,m}'
   
   s.ios.deployment_target = '6.0'
