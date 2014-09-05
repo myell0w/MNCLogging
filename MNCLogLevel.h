@@ -67,10 +67,10 @@ NS_INLINE NSString* MNCLogLevelDescription(MNCLogLevel logLevel) {
 
 
 // Shortcuts for logging with the given log levels
-#define MNCLogVerbose(...)       ({if (MNCLogLevelVerbose >= MNCGetLogLevel()) { CLS_LOG(@"%@ %@", [NSString stringWithFormat:__VA_ARGS__], MNCLogLevelDescription(MNCLogLevelVerbose));  }})
-#define MNCLogInfo(...)          ({if (MNCLogLevelInfo >= MNCGetLogLevel()) { CLS_LOG(@"%@ %@", [NSString stringWithFormat:__VA_ARGS__], MNCLogLevelDescription(MNCLogLevelInfo));  }})
-#define MNCLogWarning(...)       ({if (MNCLogLevelWarning >= MNCGetLogLevel()) { CLS_LOG(@"%@ %@", [NSString stringWithFormat:__VA_ARGS__], MNCLogLevelDescription(MNCLogLevelWarning));  }})
-#define MNCLogError(...)         ({if (MNCLogLevelError >= MNCGetLogLevel()) { CLS_LOG(@"%@ %@", [NSString stringWithFormat:__VA_ARGS__], MNCLogLevelDescription(MNCLogLevelError));  }})
+#define MNCLogVerbose(...)       ({if (MNCLogLevelVerbose >= MNCGetLogLevel()) { NSLog(@"%@ %@", [NSString stringWithFormat:__VA_ARGS__], MNCLogLevelDescription(MNCLogLevelVerbose));  }})
+#define MNCLogInfo(...)          ({if (MNCLogLevelInfo >= MNCGetLogLevel()) { NSLog(@"%@ %@", [NSString stringWithFormat:__VA_ARGS__], MNCLogLevelDescription(MNCLogLevelInfo));  }})
+#define MNCLogWarning(...)       ({if (MNCLogLevelWarning >= MNCGetLogLevel()) { NSLog(@"%@ %@", [NSString stringWithFormat:__VA_ARGS__], MNCLogLevelDescription(MNCLogLevelWarning));  }})
+#define MNCLogError(...)         ({if (MNCLogLevelError >= MNCGetLogLevel()) { NSLog(@"%@ %@", [NSString stringWithFormat:__VA_ARGS__], MNCLogLevelDescription(MNCLogLevelError));  }})
 
 // Logs variables with log level Info
 #define MNCLogVariables(...)          do { if (MNCLogLevelInfo >= MNCGetLogLevel()) { MNCLog(__VA_ARGS__)} } while(0)
